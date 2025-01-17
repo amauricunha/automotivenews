@@ -43,26 +43,25 @@ Este projeto é uma solução completa para coleta, processamento e distribuiç�
 
 A arquitetura do sistema é composta por diversas etapas, integrando a coleta, armazenamento e visualização das notícias. A estrutura geral pode ser visualizada abaixo:
 
-
-    +----------------------+        +------------------------+        +---------------------+
-    |  Sites de Notícias   |        |   Scraping (Python)    |        | MongoDB (Database)  |
-    |     Automotivas      | -----> |  + Mensageria (Kafka)  | -----> | (Armazena Notícias) |
-    +----------------------+        +------------------------+        +---------------------+
-                                        |          |                            |
-                                        |          |                            |
-                                        V          V                            V
-                +--------------------------+ +------------------------+  +-----------------------+
-                | Grupo Telegram (Notifica)| |  App (.NET MAUI, C#)   |  |      API (.NET)       |
-                +--------------------------+ |      (Assina Kafka)    |  |    (Comunica com DB)  |    
-                                                +------------------------+  +-----------------------+
-                                                                                    |
-                                                                                    |
-                                                                                    V
-                                                                            +-----------------------+
-                                                                            |  Frontend (React)     |
-                                                                            +-----------------------+
-
-
+```bash
++----------------------+        +------------------------+        +---------------------+
+|  Sites de Notícias   |        |   Scraping (Python)    |        | MongoDB (Database)  |
+|     Automotivas      | -----> |  + Mensageria (Kafka)  | -----> | (Armazena Notícias) |
++----------------------+        +------------------------+        +---------------------+
+                                    |          |                            |
+                                    |          |                            |
+                                    V          V                            V
+            +--------------------------+ +------------------------+  +-----------------------+
+            | Grupo Telegram (Notifica)| |  App (.NET MAUI, C#)   |  |      API (.NET)       |
+            +--------------------------+ |      (Assina Kafka)    |  |    (Comunica com DB)  |    
+                                         +------------------------+  +-----------------------+
+                                                                                |
+                                                                                |
+                                                                                V
+                                                                     +-----------------------+
+                                                                     |  Frontend (React)     |
+                                                                     +-----------------------+
+```
 
 ### Componentes:
 
