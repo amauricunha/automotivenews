@@ -54,7 +54,7 @@ A arquitetura do sistema é composta por diversas etapas, integrando a coleta, a
             +--------------------------+ +------------------------+  +-----------------------+
             | Grupo Telegram (Notifica)| |  App (.NET MAUI, C#)   |  |      API (.NET)       |
             +--------------------------+ |      (Assina Kafka)    |  |    (Comunica com DB)  |    
-                                         +------------------------+  +-----------------------+
+                                       +------------------------+  +-----------------------+
                                                                                 |
                                                                                 |
                                                                                 V
